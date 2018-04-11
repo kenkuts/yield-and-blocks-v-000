@@ -1,9 +1,8 @@
 def hello_t(array)
-
   if block_given?
     counter = 0
     while array.length > counter
-      yeild array[counter]
+      yield array[counter]
       counter = counter + 1
     end
 
