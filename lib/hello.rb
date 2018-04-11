@@ -1,5 +1,14 @@
 def hello_t(array)
 
-end
+  if block_given?
+    counter = 0 
+    while array.length > counter
+      yeild array[counter]
+      counter = counter + 1
+    end
 
-# call your method here!
+    array
+  else
+    puts "There is no block given!"
+  end
+end
